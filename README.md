@@ -1,1 +1,59 @@
 # StrukdatOOP
+4 Pilar OOP
+## 2. Abstraction (penyembunyian kerumitan)
+
+Abstraction adalah pilar terakhir dari ke-empat pilar pemrograman berorientasi objek yang di bahas pada artikel ini. Abstraction memiliki tujuan untuk menyembunyikan detail yang tidak terlalu penting dari user. Kita dapat membayangkannya seperti sebuah smartphone, dimana untuk menggunakan device tersebut, kita tidak perlu memahami apa yang terjadi di dalam logika elektronik dan software di dalamnya. Namun, kita hanya perlu menekan tombol power dan menyentuh layar dengan menggunakan tangan kita agar alat tersebut bisa bekerja dengan semestinya. Python memiliki module untuk menggunakan Abstract Base Classes (ABC). Abstraksi adalah konsep menyembunyikan detail implementasi dan hanya menampilkan fitur penting dari suatu objek. Dengan menggunakan abstraksi, pengguna hanya perlu mengetahui apa yang dapat dilakukan oleh objek tersebut, tanpa harus memahami cara kerjanya secara internal.  Abstraction adalah konsep menyembunyikan kompleksitas implementasi dan hanya menampilkan fitur penting kepada pengguna. Abstraksi membuat sistem kompleks mudah dikelola karena berfokus pada informasi penting dan menyembunyikan data yang tidak perlu. Hal ini memungkinkan pengembang untuk berinteraksi dengan objek tanpa mengetahui apa yang terjadi di dalamnya. Jika ringkasan membahas bagaimana suatu objek mengelola keadaan internalnya, maka abstraksi membahas apa yang dilakukan objek tersebut tanpa membahas secara mendalam bagaimana objek tersebut melakukannya. Bayangkan mengemudikan mobil, Anda mengendalikan mobil dengan menggunakan setir, pedal gas, dan rem. Mengemudi dengan benar tidak memerlukan pengetahuan tentang elemen-elemen rumit mesin seperti transmisi atau sistem pengereman. Ini adalah contoh abstraksi dalam praktiknya.
+
+Dalam pemrograman, abstraksi berarti hanya menyediakan properti dasar suatu objek kepada dunia luar sambil menyembunyikan detail implementasi yang kompleks. Hal ini memungkinkan pengembang untuk fokus pada desain dan fungsi tingkat tinggi daripada terjebak dalam detail tingkat rendah. Dalam bahasa pemrograman seperti Java, kelas abstrak dan antarmuka sering digunakan untuk melakukan hal ini.
+
+Sebagai contoh, pertimbangkan kelas Shape abstrak yang memiliki metode abstrak 'calculateArea'. Berbagai bentuk konkret seperti lingkaran dan persegi panjang kemudian akan menggunakan metode 'calculateArea' dengan cara unik mereka sendiri. Pengguna kelas Shape tidak perlu mengetahui rumus matematika yang tepat untuk menentukan luas setiap bentuk, mereka hanya perlu menggunakan 'calculateArea' dan mendapatkan jawaban yang tepat.
+
+Abstraksi mengurangi kompleksitas, meningkatkan kejelasan, dan membuat sistem lebih mudah dipelihara. Abstraksi memungkinkan perubahan pada desain internal suatu kelas tanpa memengaruhi kode yang menggunakannya, selama antarmuka publik tetap tidak berubah.
+
+---
+
+## 2. Encapsulation (membungkus data)
+
+Encapsulation adalah salah satu konsep fundamental pada pemrograman berorientasi objek. Encapsulation menggambarkan suatu ide untuk membungkus data dan metode yang bekerja pada suatu data di dalam satu unit. Hal ini memberikan batasan dalam mengakses suatu variabel dan metode secara langsung. Sehingga, dapat mencegah modifikasi data yang tidak disengaja.
+Hal tersebut sangatlah penting, karena dapat mencegah perubahan yang tidak disengaja. Bukan tidak dapat diubah, namun variabel objek tersebut hanya dapat diubah dengan metode objek. Python tidak memiliki kata kunci `private` seperti pada bahasa pemrograman yang lain. Sebagai gantinya, hal ini dapat dilakukan oleh encapsulation. Enkapsulasi adalah proses penyembunyian detail implementasi suatu objek dari dunia luar. Hanya interface publik (seperti method yang disediakan objek) yang bisa diakses, sementara data internal dilindungi agar tidak sembarangan diubah. Enkapsulasi adalah proses menyatukan data dan fungsi dalam satu unit, yaitu objek. Dengan enkapsulasi, atribut dari suatu objek dapat dilindungi agar tidak dapat diakses secara langsung dari luar objek. Hal ini meningkatkan keamanan dan integritas data. Encapsulation adalah konsep membungkus data (atribut) dan method dalam satu class serta mengontrol aksesnya. Konsep enkapsulasi menggabungkan data dengan metode pengoperasian ke dalam unit-unit individual untuk melindungi data dari modifikasi yang tidak sah. Bayangkan sebuah kapsul yang berisi sejumlah obat. Anda meminum kapsul tersebut, yakin bahwa itu akan menyembuhkan masalah tanpa memahami komposisi kimianya atau bagaimana bahan kimia tersebut berinteraksi di dalamnya. Inilah dasar dari enkapsulasi OOP. Ini adalah proses menggabungkan data (atribut) dan metode (fungsi) yang berinteraksi dengannya ke dalam satu kelas.
+
+Penyembunyian data adalah tujuan utama enkapsulasi. Untuk memblokir akses langsung dari luar kelas, anggota data dapat diatur menjadi privat. Akibatnya, metode publik yang dikenal sebagai 'getter' (untuk mendapatkan data) dan 'setter' (untuk mengubah data) digunakan untuk memungkinkan akses. Akses terbatas ini menjamin integritas data dan mencegah modifikasi yang tidak diinginkan.
+
+Pertimbangkan sebuah kelas bernama Rekening Bank. Kelas ini mungkin memiliki atribut saldo. Tanpa enkapsulasi, komponen apa pun dalam program Anda dapat mengubah saldo, yang pada akhirnya menyebabkan kesalahan. Saat menerapkan enkapsulasi, saldo bersifat privat, tetapi metode publik seperti jumlah deposit dan jumlah penarikan tersedia. Teknik-teknik ini menggunakan logika verifikasi untuk menjaga keamanan status rekening bank, seperti mencegah penarikan negatif.
+
+Secara sederhana, enkapsulasi meningkatkan fleksibilitas dan keamanan. Setiap objek menjadi unit mandiri yang mengelola keadaan dan perilakunya sendiri, sehingga kode menjadi lebih mudah dipahami, dipelihara, dan didiagnosis.
+
+---
+
+## 3. Inheritance (pewarisan sifat)
+
+Inheritance memungkinkan kita untuk mewarisi atribut dan metode dari suatu kelas dasar (base) atau induk (parent). Hal ini sangat berguna karena kita membuat sub-kelas yang dapat menggunakan semua fungsi dari parent class. Selain itu, kita dapat menimpa atau menambahkan fungsi yang baru tanpa mempengaruhi parent class. Untuk memahami konsep inheritance dengan mudah, kita dapat menganalogikan sifat seorang anak mewarisi sifat orang tuanya. Sama hal nya pada Python yang memiliki dua kelas, yaitu:
+
+1. Parent class (super atau base class)  
+2. Child class (subclass atau derived class)
+
+Class yang mewarisi sifat disebut sebagai Child class, sedangkan class yang diwarisi sifatnya adalah Parent class. Inheritance memiliki kemampuan untuk membuat Sub-classes yang berisi spesialisasi dari Parent class. Selanjutnya, inheritance dapat di bagi lagi menjadi empat tipe, yaitu single, multilevel, hierarchical, dan multiple inheritance. Inheritance memungkinkan sebuah class (kelas) untuk mewarisi properti dan method dari class lain. Ini memungkinkan pengkodean yang lebih efisien dan menjadikan OOP sangat cocok untuk membangun aplikasi skala besar. Pewarisan memungkinkan sebuah kelas untuk mewarisi atribut dan metode dari kelas lain. Dengan cara ini, pengembang dapat menciptakan hierarki antar objek, mengurangi pengulangan kode, dan meningkatkan efisiensi pengembangan. Teknik pemrograman pewarisan memungkinkan kelas untuk mewarisi properti dan perilakunya dari kelas yang sudah ada, sehingga menciptakan struktur kode yang dapat digunakan kembali dalam pengembangan kode. Kemampuan OOP untuk mendorong penggunaan kembali kode melalui pewarisan adalah salah satu karakteristiknya yang paling ampuh. Kelas baru (subkelas atau kelas anak) dapat memperoleh properti dan perilaku dari kelas yang sudah ada (superkelas atau kelas induk), seperti anak mewarisi karakteristik dari orang tuanya. Ini membangun hubungan 'adalah' seperti dalam 'Anjing adalah Hewan' atau 'Mobil adalah Kendaraan'.
+
+Dengan memungkinkan fungsi-fungsi umum didefinisikan sekali dalam kelas dasar dan kemudian digunakan oleh beberapa kelas yang dihasilkan, pewarisan menghilangkan duplikasi kode. Hal ini mempercepat pengembangan, mengurangi kemungkinan kesalahan, dan menyederhanakan pemeliharaan dan perluasan kode.
+
+Pertimbangkan kelas Vehicle yang memiliki metode seperti accelerate dan brake serta properti umum seperti color dan speed. Setelah itu, Anda dapat membuat kelas berdasarkan kendaraan seperti mobil dan sepeda motor. Mobil dan sepeda motor secara otomatis mendapatkan fungsi speed, color, acceleration, dan brake.
+
+Pewarisan menciptakan basis kode yang lebih logis dan mudah diakses melalui promosi struktur kelas yang terorganisir yang mencerminkan klasifikasi aktual. Ini adalah bagian penting dari apa yang membuat keempat pilar OOP di Java begitu efektif untuk mengembangkan aplikasi yang kompleks.
+
+---
+
+## 4. Polymorphism (banyak bentuk)
+
+Polymorphism adalah kemampuan untuk mengambil bentuk yang berbeda. Polymorphism dalam Python memungkinkan kita untuk mendefinisikan metode pada child class dengan menggunakan nama yang sama seperti pada parent class. Polymorphism dibangun berdasarkan dua suku kata, yaitu Poly (banyak) dan Morphism (bentuk). Artinya adalah fungsi yang sama dapat digunakan pada tipe yang berbeda, sehingga membuat programming lebih intuitif dan mudah. Dalam bahasa pemrograman berorientasi objek pada Python, kita memiliki cara-cara yang berbeda untuk mendefinisikan polymorphism. Class child mewarisi seluruh method dari parent class. Namun, ada beberapa kasus di mana metode tersebut tidak cocok dengan child class. Oleh karena itu, kita harus mengimplementasikan kembali metode yang pada child class yang dinamakan Method Overriding. Contohnya dapat dilihat pada bagian Polymorphism dengan inheritance. Polimorfisme memungkinkan objek untuk memiliki banyak bentuk — misalnya, method dengan nama sama bisa berperilaku berbeda tergantung pada konteksnya. Ini meningkatkan fleksibilitas dan dinamis dalam pengkodean. Polimorfisme memungkinkan objek yang berbeda untuk merespons suatu perintah yang sama dengan cara yang berbeda. Sebagai contoh, metode "jalankan()" dapat memiliki perilaku berbeda pada objek “Mobil” dan “Robot”, meskipun keduanya menggunakan nama metode yang sama. Metode yang sama akan menunjukkan perilaku yang berbeda tergantung pada instance objek yang memicu eksekusinya, yang meningkatkan fleksibilitas pemrograman. Kata Yunani “polimorfisme” berarti “banyak bentuk.” Polimorfisme dalam OOP memungkinkan objek dari kelas yang berbeda dianggap sebagai milik superkelas yang sama. Hal ini menghasilkan kode yang sangat mudah beradaptasi dan diperluas karena memungkinkan banyak bentuk fundamental untuk direpresentasikan oleh satu antarmuka.
+
+Dua tipe utama polimorfisme –
+
+Overloading Metode (Polimorfisme Waktu Kompilasi): Suatu metode terjadi ketika beberapa metode dalam kelas yang sama memiliki nama yang sama tetapi berbeda dalam parameter (jumlah, tipe, atau urutan). Kompilator memilih metode mana yang akan digunakan berdasarkan informasi yang diberikan. Misalnya, kelas kalkulator dapat menyediakan add (int a, int b) dan add (double a, double b).
+Penggantian Metode (Polimorfisme Saat Eksekusi): Ini juga dikenal sebagai polimorfisme saat eksekusi, terjadi ketika subkelas menyediakan implementasi uniknya sendiri untuk metode yang dinyatakan dalam superkelasnya. Tipe objek, bukan tipe variabel referensi, menentukan metode mana yang digunakan saat eksekusi. Ini sangat penting dalam empat pilar OOP.
+Kode yang menggunakan polimorfisme lebih mudah beradaptasi dan membutuhkan lebih sedikit pernyataan 'if-else' atau switch. Dengan mendukung 'Prinsip Terbuka/Tertutup', yang menyatakan bahwa elemen perangkat lunak harus tertutup untuk modifikasi tetapi terbuka untuk perluasan, hal ini memungkinkan penambahan fitur baru tanpa memodifikasi kode fungsional yang telah dibuat sebelumnya
+
+---
+
+
+
+
